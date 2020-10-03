@@ -1,15 +1,9 @@
 body
 {
     margin:0px; /* Remove the default 8px margin */
+    padding: 0;
     font-size:18px;
-    font-family:Helvetica,arial,sans-serif;
-
-}
-h1{
-
-  color: white;
-  margin: 0 0 0 2vw;
-  font-size: 30px;
+    font-family:"montserrat",sans-serif;
 
 }
 
@@ -110,14 +104,104 @@ input[type="radio"]
     -ms-transform:scale(1,1);
 
 }
-.title{
+.header{
 
   margin-top: 0px;
   width: 100%;
   background: #01BAEF;
+  height: 100px;
+  padding: 0 20px;
 
+
+}
+.logo{
+    line-height: 100px;
+    float: left;
+    color: white;
+    margin: 0 0 0 2vw;
+    font-size: 30px;
 }
 p{
   text-align: center;
   color: white;
+}
+
+.menu{
+    float: right;
+}
+
+.menu a{
+
+    text-transform: uppercase;
+    transition: 0.4s;
+    color: white;
+    padding:  15px 30px ;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    line-height: 70px;
+
+
+}
+
+.show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+.show-menu-btn{
+
+    float: right;
+    width: 15vw;
+}
+.show-menu-btn i{
+    line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+    color: #380036;
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+
+}
+@media screen and (max-width:800px){
+    .show-menu-btn,.hide-menu-btn{
+        display: block;
+
+    }
+    .menu{
+        position: fixed;
+        width: 30%;
+        height: 100vh;
+        background: #150811;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 3%;
+        right: 0%;
+        color: white;
+
+    }
+    #chk:checked ~ .menu{
+        right: 0;
+    }
 }

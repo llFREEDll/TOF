@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://kit.fontawesome.com/104c4f9da0.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title> TOF</title>
+    <title>TOF</title>
   </head>
   <body>
-    <div class="title">
-        <h1>TOF: Think On Future </h1>
+    <div class="header">
+        <h2 class="logo">TOF: Think On Future </h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+        </label>
+        <ul class="menu">
+            <a href="index.html" >
+                Home</a>
+            <a href="#" onclick="About()">
+                About</a>
+            <a href="#" onclick="Works()">
+                Works</a>
+            <a href="#" onclick="Contact()">
+                Contact</a>
+
+        <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+        </label>
+    </ul>
     </div>
 
 
@@ -29,6 +50,6 @@
       </div>
 
   </div>
-
+    <script src="logic.js"></script>
   </body>
 </html>
