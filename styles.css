@@ -10,13 +10,11 @@ body
 #questionBox
 {
     width:50%;
-    margin: auto;
+    margin-left: 7vw;
     margin-top:2vh;
     padding: 15px 15px 15px 15px;
     border-radius: 15px 15px 15px 15px;
     background-color: #0CBABA;
-    color: #26081C;
-
 }
 
 label
@@ -27,7 +25,7 @@ label
     margin-bottom:2vh;
     width: 100%;
     display: flex;
-  justify-content: center;
+    justify-content: center;
 
 }
 label:after
@@ -121,10 +119,7 @@ input[type="radio"]
     margin: 0 0 0 2vw;
     font-size: 30px;
 }
-p{
-  text-align: center;
-  color: white;
-}
+
 
 .menu{
     float: right;
@@ -208,8 +203,58 @@ p{
     }
     #chk:checked ~ .menu{
         right: 0;
+
     }
     .logo{
       font-size: 26px;
     }
+    .sidenav{
+      left: -100%;
+    }
+    .presentacion p{
+
+      width: 80%;
+
+    }
+
+    #questionBox{
+      width: 80%;
+    }
+
+}
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 350px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  top: 0; /* Stay at the top */
+  right: 6vw;
+  background-color: #150811; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  margin-top: 40px;
+}
+.sidenavBox{
+  margin: 20px;
+  height: 40px;
+  padding: 2px;
+  background-color: #380036;
+  text-align: center;
+  line-height: 7px;
+  color: white;
+
+}
+.presentacion{
+  margin-left: 5vw;
+  padding: 20px;
+
+}
+
+.title{
+  color: #150811;
+  font-size: 25px;
+}
+.presentacionParrafo{
+  font-size: 20px;
+  width: 60%;
+  color: #150811;
+  text-align: left;
 }
