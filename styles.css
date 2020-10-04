@@ -223,20 +223,22 @@ input[type="radio"]
 
 }
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 90%; /* Full-height: remove this if you want "auto" height */
   width: 350px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  top: 0; /* Stay at the top */
+  top: 1vh; /* Stay at the top */
   right: 6vw;
-  background-color: #150811; /* Black */
+  background-color: #white;
   overflow-x: hidden; /* Disable horizontal scroll */
   margin-top: 40px;
+  border-radius: 15px;
+  border: 6px solid #01BAEF;
 }
 .sidenavBox{
   margin: 20px;
   height: 40px;
   padding: 2px;
-  background-color: #380036;
+  background-color: #225D78;
   text-align: center;
   line-height: 7px;
   color: white;
