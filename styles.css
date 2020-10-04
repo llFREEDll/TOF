@@ -10,11 +10,12 @@ body
 #questionBox
 {
     width:50%;
-    margin-left: 7vw;
+    margin-left: 4vw;
     margin-top:2vh;
     padding: 15px 15px 15px 15px;
     border-radius: 15px 15px 15px 15px;
     background-color: #0CBABA;
+    font-size: 20px;
 }
 
 label
@@ -209,16 +210,23 @@ input[type="radio"]
       font-size: 26px;
     }
     .sidenav{
-      left: -100%;
+      left: -130%;
     }
     .presentacion p{
 
-      width: 80%;
+      width: 90%;
+      font-size: 14px;
 
     }
-
+    .title{
+      font-size: 20px;
+    }
+    body{
+        align-items: center;
+      }
     #questionBox{
       width: 80%;
+      font-size: 14px;
     }
 
 }
@@ -228,7 +236,7 @@ input[type="radio"]
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   top: 1vh; /* Stay at the top */
   right: 6vw;
-  background-color: #white;
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   margin-top: 40px;
   border-radius: 15px;
@@ -259,4 +267,12 @@ input[type="radio"]
   width: 60%;
   color: #150811;
   text-align: left;
+}
+#questionBox p{
+
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding: 8px;
+
 }
