@@ -1,121 +1,186 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <script src="https://kit.fontawesome.com/104c4f9da0.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>TOF</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="header">
-        <h2 class="logo">TOF: Think On Future </h2>
-        <input type="checkbox" id="chk">
-        <label for="chk" class="show-menu-btn">
-            <i class="fas fa-ellipsis-h"></i>
-        </label>
-        <ul class="menu">
-            <a href="index.html" >
-                Home</a>
-            <a href="#" onclick="About()">
-                About</a>
-            <a href="#" onclick="Works()">
-                Services</a>
-            <a href="#" onclick="Contact()">
-                Contact</a>
-            <a href="https://github.com/llFREEDll/TOF" >
-                Full code</a>
 
-        <label for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-    </ul>
-    </div>
-    <div class="presentacion">
-      <h3 class="title">TOF</h3>
-            <p class="presentacionParrafo">En este sitio podrás encontrar herramientas que te ayudarán a
-              tomar una decisión sobre qué tipo de carrera universitaria
-               deberías estudiar, también puedes consultar una lista de las
-               universidades más reconocidas de la ciudad así como sus
-               planes de estudios.
-              </p>
-              <p class="presentacionParrafo">
-              Y recuerda que el futuro es tan oscuro que no lo podemos vislumbrar y depende de nosotros mismos darle luz y volverlo cálido con cada una de nuestras acciones.
-              </p>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top colorOne" >
 
-    </div>
-    <div id="questionBox">
-      <p>Ejemplo de pregunta?</p>
-      <div id="rbtns">
-        <label>
-            <input type="radio" name="radio"><div class="rd"></div>Answer 1
-        </label>
-        <label>
-            <input type="radio" name="radio"><div class="rd"></div>Answer 2
-        </label>
-        <label>
-            <input type="radio" name="radio"><div class="rd"></div>Answer 3  ejemplo largo para probar si funciona el auto ajuste
-        </label>
-        <label>
-            <input type="radio" name="radio"><div class="rd"></div>Answer 4
-        </label>
+      <a class="text-white navbar-brand font-weight-bold" href="#">TOF: Think On Future</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="text-white nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link " href="#" onclick = "About()">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link " href="#" onclick = "Works()">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link " href="#" onclick = "Contact()">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link " href="https://github.com/llFREEDll/TOF" >Full code</a>
+          </li>
+
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
       </div>
+
+    </nav>
+
+    <main class="container">
+      <div class="jumbotron colorTwo align-middle">
+        <p class="lead text-white d-flex justify-content-center">Ejemplo de pregunta ?</p>
+
+        <div class="input-group w-50 marginLeft25">
+        <div class="input-group-prepend">
+          <div class="input-group-text ">
+            <input type="radio" class="colorThree" name="radio" aria-label="Radio button for following text input">
+          </div>
+        </div>
+        <input type="text" class="form-control " aria-label="Text input with radio button" disabled value="Answer 1">
+      </div>
+
+      <div class="input-group w-50 marginLeft25">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio" name="radio" aria-label="Radio button for following text input">
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 2">
+    </div>
+
+    <div class="input-group w-50 marginLeft25">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="radio" name="radio" aria-label="Radio button for following text input">
+      </div>
+    </div>
+    <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 3">
   </div>
-  <div id="questionBox">
-    <p>Ejemplo de pregunta 2?</p>
-    <div id="rbtns">
-      <label>
-          <input type="radio" name="radio"><div class="rd"></div>Answer 1
-      </label>
-      <label>
-          <input type="radio" name="radio"><div class="rd"></div>Answer 2
-      </label>
-      <label>
-          <input type="radio" name="radio"><div class="rd"></div>Answer 3  ejemplo largo para probar si funciona el auto ajuste
-      </label>
-      <label>
-          <input type="radio" name="radio"><div class="rd"></div>Answer 4
-      </label>
+
+  <div class="input-group w-50 marginLeft25">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" name="radio" aria-label="Radio button for following text input">
     </div>
-</div>
-<div id="questionBox">
-  <p>Ejemplo de pregunta 3?</p>
-  <div id="rbtns">
-    <label>
-        <input type="radio" name="radio"><div class="rd"></div>Answer 1
-    </label>
-    <label>
-        <input type="radio" name="radio"><div class="rd"></div>Answer 2
-    </label>
-    <label>
-        <input type="radio" name="radio"><div class="rd"></div>Answer 3  ejemplo largo para probar si funciona el auto ajuste
-    </label>
-    <label>
-        <input type="radio" name="radio"><div class="rd"></div>Answer 4
-    </label>
   </div>
+  <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 4">
 </div>
-  <div class="sidenav">
-    <div class="sidenavBox">
-      <p>Opcion 1</p>
+
+      </div>
+
+    </main>
+
+    <main class="container">
+      <div class="jumbotron colorTwo align-middle">
+        <p class="lead text-white d-flex justify-content-center">Ejemplo de pregunta ?</p>
+
+        <div class="input-group w-50 marginLeft25">
+        <div class="input-group-prepend">
+          <div class="input-group-text ">
+            <input type="radio" class="colorThree" name="radio" aria-label="Radio button for following text input">
+          </div>
+        </div>
+        <input type="text" class="form-control " aria-label="Text input with radio button" disabled value="Answer 1">
+      </div>
+
+      <div class="input-group w-50 marginLeft25">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio" name="radio" aria-label="Radio button for following text input">
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 2">
     </div>
-    <div class="sidenavBox">
-      <p>Opcion 2</p>
+
+    <div class="input-group w-50 marginLeft25">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="radio" name="radio" aria-label="Radio button for following text input">
+      </div>
     </div>
-    <div class="sidenavBox">
-      <p>Opcion 3</p>
+    <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 3">
+  </div>
+
+  <div class="input-group w-50 marginLeft25">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" name="radio" aria-label="Radio button for following text input">
     </div>
-    <div class="sidenavBox">
-      <p>Opcion 4</p>
-    </div>
-    <div class="sidenavBox">
-      <p>Opcion 5</p>
-    </div>
-    <div class="sidenavBox">
-      <p>Opcion 6</p>
-    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 4">
 </div>
-    <script src="logic.js"></script>
+
+      </div>
+
+    </main>
+    <main class="container">
+      <div class="jumbotron colorTwo align-middle">
+        <p class="lead text-white d-flex justify-content-center">Ejemplo de pregunta ?</p>
+
+        <div class="input-group w-50 marginLeft25">
+        <div class="input-group-prepend">
+          <div class="input-group-text ">
+            <input type="radio" class="colorThree" name="radio" aria-label="Radio button for following text input">
+          </div>
+        </div>
+        <input type="text" class="form-control " aria-label="Text input with radio button" disabled value="Answer 1">
+      </div>
+
+      <div class="input-group w-50 marginLeft25">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <input type="radio" name="radio" aria-label="Radio button for following text input">
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 2">
+    </div>
+
+    <div class="input-group w-50 marginLeft25">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="radio" name="radio" aria-label="Radio button for following text input">
+      </div>
+    </div>
+    <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 3">
+  </div>
+
+  <div class="input-group w-50 marginLeft25">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input type="radio" name="radio" aria-label="Radio button for following text input">
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Answer 4">
+</div>
+
+      </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="logic.js">
+
+</script>
   </body>
 </html>
