@@ -18,7 +18,10 @@
 
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="text-white nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <a class="text-white nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="text-white nav-link " href="universidades.html" >Universidades</a>
           </li>
           <li class="nav-item">
             <a class="text-white nav-link " href="#" onclick = "About()">About</a>
@@ -30,10 +33,7 @@
             <a class="text-white nav-link " href="#" onclick = "Contact()">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="text-white nav-link " href="https://github.com/llFREEDll/TOF" >Full code</a>
-          </li>
-          <li class="nav-item">
-            <a class="text-white nav-link " href="universidades.html" >Universidades</a>
+            <a class="text-white nav-link " href="https://github.com/llFREEDll/TOF" >GitHub</a>
           </li>
 
         </ul>
@@ -46,23 +46,95 @@
     <div class="nav-scroller bg-white shadow-sm">
   <nav class="nav nav-underline ">
 
-    <a class="nav-link active textColor1" href="#">UDV</a>
-    <a class="nav-link textColor1" href="#">UMSNH</a>
-    <a class="nav-link textColor1" href="#">UVA</a>
-    <a class="nav-link textColor1" href="#">UNICLA</a>
-    <a class="nav-link textColor1" href="#">UNID</a>
-    <a class="nav-link textColor1" href="#">ITSU</a>
-    <a class="nav-link textColor1" href="#">UNIVA</a>
+    <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link textColor1" id="UDV-tab" data-toggle="tab" href="#UDV" role="tab" aria-selected="false">UDV</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link textColor1" id="UMSNH-tab" data-toggle="tab" href="#UMSNH" role="tab" aria-selected="false">UMSNH</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link textColor1" id="UVA-tab" data-toggle="tab" href="#UVA" role="tab" aria-selected="false">UVA</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link textColor1" id="UNICLA-tab" data-toggle="tab" href="#UNICLA" role="tab" aria-selected="false">UNICLA</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link textColor1" id="UNID-tab" data-toggle="tab" href="#UNID" role="tab" aria-selected="false">UNID</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link textColor1" id="ITSU-tab" data-toggle="tab" href="#ITSU" role="tab" aria-selected="false">ITSU</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link textColor1" id="UNIVA-tab" data-toggle="tab" href="#UNIVA" role="tab" aria-selected="false">UNIVA</a>
+        </li>
+
+  </ul>
+  <div class="tab-content marginLeft3 marginRight3" id="myTabContent">
+    <div class="tab-pane fade show active bg-white shadow p-3 mb-5 rounded" id="UDV" role="tabpanel" aria-labelledby="UDV-tab">
+      <h4>Universidad Don Vasco</h4>
+      <p>Ubicación: Carr. Uruapan-Pátzcuaro 1100, Lomas del Valle, 60110 Uruapan, Mich.</p>
+      <p>Google maps: <a class=" noTextDecoration textColor1" href="https://goo.gl/maps/EMSRqZJGPySGeB8M7">Abrir en Google maps</a></p>
+      <p>Página web: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/index.html">Abrir pagina principal de UDV</a></p>
+      <p class="noMarginBot font-weight-bold ">Incorporados a la UNAM</p>
+      <p class="noMarginTop">Las licenciaturas y el Colegio de Ciencias y Humanidades de la Universidad Don Vasco están incorporados a la Universidad Nacional Autónoma de México.</p>
+      <p class="noMarginBot font-weight-bold">Becas internas y de excelencia</p>
+      <p class="noMarginTop">Cuentan con un sistema de becas internas y becas de excelencia para apoyar a los alumnos que lo requieran.</p>
+      <p class="font-weight-bold">Carreras Disponibles:	</p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en administración:</p>
+      <p class="noMarginTop ">La licenciatura en administración tiene como propósito general formar profesionales competentes, cuyos conocimientos y capacidades le permitan lograr la efectividad interna de una empresa u organización y su adaptación eficaz a un ambiente de negocios. El licenciado en administración es un visionario y un experto en integrar y dirigir grupos humanos hacia el logro de objetivos organizacionales, mediante la planeación, organización, la dirección y el control.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/admon/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en arquitectura:</p>
+      <p class="noMarginTop ">El arquitecto es un profesional capacitado para resolver demandas de espacio libre y construido para la vivienda, el trabajo, la recreación y la circulación, acordes a los factores naturales y del medio sociocultural. Esto le exige una búsqueda constante de equilibrio entre la funcionalidad y recursos constructivos, estéticos y ambientales. Las soluciones que propone deben permitir múltiples relaciones humanas con altos niveles de eficiencia y confort, en espacios que apoyen y faciliten la vida cotidiana.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/arq/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en contaduría:</p>
+      <p class="noMarginTop ">El Licenciado en Contaduría es un asesor en cuestiones financieras, de diseño e interpretación de sistemas de información financiera y contable para la toma de decisiones. Como profesional participa en la planeación estratégica y financiera, la evaluación de alternativas de financiamiento y estructura financiera de las organizaciones, evaluación de riesgos de carácter financiero, así como el diseño de sistemas de control interno de acuerdo a las buenas prácticas establecidas por las normas del gobierno corporativo en busca de la optimización de recursos. Es el experto que participa en la evaluación y dictaminación de información financiera y fiscal y promueve el cumplimiento de las obligaciones tributarias a las entidades a las que presta sus servicios guiado por un alto sentido ético y de responsabilidad social.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/conta/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en derecho:</p>
+      <p class="noMarginTop ">El abogado es el profesional formado con los conocimientos y habilidades para comprender, evaluar el campo y la problemática del derecho y con una sólida conciencia de su responsabilidad y compromiso social para el logro de los fines y principios del derecho como la justicia, la equidad, el bien común, la paz social.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/dere/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en diseño y comunicación visual:</p>
+      <p class="noMarginTop ">La Escuela de Diseño y Comunicación Visual de la Universidad Don Vasco forma profesionistas que estudian la aplicación de los procedimientos y el manejo de las técnicas para la producción y la investigación de mensajes visuales. Aplica el análisis y la síntesis para la creación y la producción de imágenes, así como para la lectura e interpretación de las mismas, impactando y creando expectación en el receptor.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/dise/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en informática:</p>
+      <p class="noMarginTop ">El licenciado en informática es el profesional líder y emprendedor, que crea y aplica las mejores estrategias para maximizar el uso de recursos informáticos, a través de redes de computadoras, sitios web, sistemas hechos a la medida, administración de centros de cómputo, auditorías informáticas, soporte técnico, entre otros, cubriendo así las necesidades de información y tecnología en las organizaciones públicas y privadas.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/info/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Ingeniería Civil:</p>
+      <p class="noMarginTop ">La Escuela de Ingeniería Civil de la Universidad Don Vasco forma profesionales para atender proyectos de infraestructura con un enfoque teórico-práctico que abarca todas sus etapas fundamentales: la planeación, el diseño, la construcción bajo control, la calidad, la seguridad y el mantenimiento.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/inge/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en pedagogía:</p>
+      <p class="noMarginTop ">La misión del profesional de pedagogía es elevar la calidad de la educación en sus diferentes ámbitos: el familiar, escolar, empresarial y en los medios de comunicación tradicionales y electrónicos</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/peda/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en psicología:</p>
+      <p class="noMarginTop ">La Psicología es una ciencia que se enfoca al estudio de las experiencias humanas con una visión integradora del hombre en su realidad biológica, emocional, social y espiritual.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/psi/resume01.png">mostrar retícula</a></p>
+
+      <p class="noMarginTop noMarginBot font-italic">Licenciatura en trabajo social:</p>
+      <p class="noMarginTop ">La licenciatura en trabajo social promueve el cambio social, la resolución de problemas en las relaciones humanas, el fortalecimiento en la organización y el empoderamiento de las comunidades, grupos e instituciones para incrementar su bienestar.</p>
+      <p>Retícula: <a class=" noTextDecoration textColor1" href="http://www.udv.edu.mx/img/portfolio/trab/resume01.png">mostrar retícula</a></p>
+
+    </div>
+    <div class="tab-pane fade" id="UMSNH" role="tabpanel" aria-labelledby="UMSNH-tab">Universidad Michoacana de San Nicolás de Hidalgo</div>
+    <div class="tab-pane fade" id="UVA" role="tabpanel" aria-labelledby="UVA-tab">Universidad Vizcaya de las Américas</div>
+    <div class="tab-pane fade" id="UNICLA" role="tabpanel" aria-labelledby="UNICLA-tab">Universidad Contemporánea de las Américas</div>
+    <div class="tab-pane fade" id="UNID" role="tabpanel" aria-labelledby="UNID-tab">Universidad Interamericana para el Desarrollo</div>
+    <div class="tab-pane fade" id="ITSU" role="tabpanel" aria-labelledby="ITSU-tab">Instituto Tecnológico Superior de Uruapan</div>
+    <div class="tab-pane fade" id="UNIVA" role="tabpanel" aria-labelledby="UNIVA-tab">Universidad del Valle de Atemajac</div>
+
+  </div>
 
 
   </nav>
 </div>
-
-  <main class="container mt-5 ">
-    <div class="d-flex align-items-center p-3 my-3 text-white colorTwo rounded shadow-sm">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-  </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>

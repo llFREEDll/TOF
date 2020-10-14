@@ -30,9 +30,25 @@ font-size: 3.5rem;
 .marginLeft25{
   margin-left: 25% !important;
 }
+.marginLeft3{
+  margin-left: 3% !important;
+}
+.marginRight3{
+  margin-right: 5% !important;
+}
+.noMarginTop{
+  margin-top: 0 !important;
+}
+.noMarginBot{
+  margin-bottom: 0 !important;
+}
 .colorFour{
   background-color: 	#0086ad !important;
 }
 .textColor1{
-  color: 	#0086ad;
+  color: 	#0086ad !important;
+}
+.noTextDecoration{
+  text-decoration: none !important;
+
 }
