@@ -112,3 +112,9 @@ for (var i = 0; i < 5; i++) {
   CreateQuestion("ejemplo" + i , "si" , "si", "no", "no", i);
 
 }
+
+const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
+
+  alert("Soy un boton en construccion");  
+
+}

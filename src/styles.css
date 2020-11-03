@@ -61,3 +61,6 @@ font-size: 3.5rem;
   overflow: hidden;
   border-top: 1px solid #005582;
 }
+.marginLeft40{
+  margin-left: 40% !important;
+}
