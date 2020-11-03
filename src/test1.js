@@ -1,4 +1,4 @@
-const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuestaText3, respuestaText4, RadioName) => {
+const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuestaText3, respuestaText4 , RadioName) => {
 
   let ContenerdorDePreguntas = document.getElementById("preguntas");
 
@@ -24,6 +24,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuest
   var inputRespuesta3 = document.createElement("input");
   var respuesta3 = document.createElement("input");
 
+// papra crear nuevas respuestas copiar y pegar
   var divrespuesta4 = document.createElement("div");
   var div2respuesta4 = document.createElement("div");
   var div3respuesta4 = document.createElement("div");
@@ -63,6 +64,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuest
   respuesta3.value = respuestaText3;
   respuesta3.disabled = true;
 
+// papra crear nuevas respuestas copiar y pegar
   divrespuesta4.className = "input-group w-50 marginLeft25";
   div2respuesta4.className = "input-group-prepend";
   div3respuesta4.className = "input-group-text bg-white";
@@ -94,6 +96,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuest
   div3respuesta3.appendChild(inputRespuesta3);
   divrespuesta3.appendChild(respuesta3);
 
+// papra crear nuevas respuestas copiar y pegar
   divPregunta.appendChild(divrespuesta4);
   divrespuesta4.appendChild(div2respuesta4);
   div2respuesta4.appendChild(div3respuesta4);
@@ -105,5 +108,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuest
 }
 
 for (var i = 0; i < 5; i++) {
-  CreateQuestion("Ejemplo" + i , "si" , "si", "no", "no", i);
+
+  CreateQuestion("ejemplo" + i , "si" , "si", "no", "no", i);
+
 }
