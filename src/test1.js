@@ -6,25 +6,25 @@ const CreateDropDownQuestion = (TextoPregunta, respuestaText1, respuestaText2 , 
   var divPregunta = document.createElement("div");
   var parrafoPregunta = document.createElement("p");
   var textNode = document.createTextNode(TextoPregunta); // variable comodin para agregar textos
-  var textNode11 = document.createTextNode(respuestaText1);
-  var textNode12 = document.createTextNode(respuestaText2);
-  var textNode13 = document.createTextNode(respuestaText3);
-  var textNode14 = document.createTextNode(respuestaText4);
+  var textNode11 = document.createTextNode("1");
+  var textNode12 = document.createTextNode("2");
+  var textNode13 = document.createTextNode("3");
+  var textNode14 = document.createTextNode("4");
 
-  var textNode21 = document.createTextNode(respuestaText1);
-  var textNode22 = document.createTextNode(respuestaText2);
-  var textNode23 = document.createTextNode(respuestaText3);
-  var textNode24 = document.createTextNode(respuestaText4);
+  var textNode21 = document.createTextNode("1");
+  var textNode22 = document.createTextNode("2");
+  var textNode23 = document.createTextNode("3");
+  var textNode24 = document.createTextNode("4");
 
-  var textNode31 = document.createTextNode(respuestaText1);
-  var textNode32 = document.createTextNode(respuestaText2);
-  var textNode33 = document.createTextNode(respuestaText3);
-  var textNode34 = document.createTextNode(respuestaText4);
+  var textNode31 = document.createTextNode("1");
+  var textNode32 = document.createTextNode("2");
+  var textNode33 = document.createTextNode("3");
+  var textNode34 = document.createTextNode("4");
 
-  var textNode41 = document.createTextNode(respuestaText1);
-  var textNode42 = document.createTextNode(respuestaText2);
-  var textNode43 = document.createTextNode(respuestaText3);
-  var textNode44 = document.createTextNode(respuestaText4);
+  var textNode41 = document.createTextNode("1");
+  var textNode42 = document.createTextNode("2");
+  var textNode43 = document.createTextNode("3");
+  var textNode44 = document.createTextNode("4");
 
   var divrespuesta1 = document.createElement("div");
   var div2respuesta1 = document.createElement("div");
@@ -230,7 +230,6 @@ const CreateDropDownQuestion = (TextoPregunta, respuestaText1, respuestaText2 , 
 
 }
 
-CreateDropDownQuestion("ejemplo dropdown con codigo" , "si" , "si", "no", "no");
 
 const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuestaText3, respuestaText4 , RadioName) => {
 
