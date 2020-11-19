@@ -55,6 +55,13 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , idRespue
 
 createTituloTest=(tituloText, cuerpoText)=>
 {
+  /*
+  lo que busco en esta parte es que con el tituloText, sea el titulo del test como "test 1"
+  que tenga un salto de linea para las indicaciones, en esas indicaciones seria ideal que
+  pudiera poner yo saltos de lineas con esto "\n" por que en el test 2 pongo las 4 posibles
+  respuestas y explicar que significa, te dejo a ti los colores que quieras usar, solo
+  requiero eso para la estructura
+  */
   let ContenerdorDePreguntas = document.getElementById("preguntas");
 
   var pregunta = document.createElement("main");
@@ -358,9 +365,6 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
       alert("Tu vocacion podria ser en la Musica");
       break;
   }
-  //alert("El numero mayor es: "+resul[9]);
-  //alert("CF="+cf+", CB="+cb+", CP="+cp+", C="+c+", E="+e+", P="+p+", L="+l+", H="+h+", A="+a+", M="+m);
-//example push
 }
 
 function compareNumbers(a, b) {
