@@ -80,7 +80,7 @@ createTituloTest=(tituloText, cuerpoText)=>
   var pregunta = document.createElement("main");
   var divPregunta = document.createElement("div");
   var parrafoPregunta = document.createElement("p");
-  parrafoPregunta.innerHTML = tituloText+".\n"+cuerpoText;
+  parrafoPregunta.innerHTML = tituloText +cuerpoText;
 
   pregunta.className = "container";
   divPregunta.className = "jumbotron colorTwo align-middle shadow p-3 mb-5";
@@ -111,6 +111,18 @@ for (var i = 0; i < 11; i++) {
   CreateDropDownQuestion(seccionArray[i] , preguntasArray[aux] , preguntasArray[aux+1], preguntasArray[aux+2], preguntasArray[aux+3], preguntasArray[aux+4], aux, aux+1, aux+2, aux+3, aux+4);
   aux+=5;
 }
+let arrayTablaRespuestas = ["Verbal",
+  "Numerica",
+"Mecanica y Constructiva",
+"Artistico-Plastica",
+"Musical",
+"Científica",
+"Social",
+"Destreza manual",
+"Practica",
+"Ejecutiva",
+"Trabajo de oficina"
+];
 const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
 
   /*
@@ -140,33 +152,66 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
     res=parseInt(a,10)+parseInt(b,10)+parseInt(c,10)+parseInt(d,10)+parseInt(e,10);
     arrayResultados.push(res);
   }
-  GenerarRespuesta("Resultados:<br>Verbal="+arrayResultados[0]+" puntos<br>"+
-        "Numerica="+arrayResultados[1]+" puntos<br>"+
-        "Mecanica y Constructiva="+arrayResultados[2]+" puntos<br>"+
-        "Artistico-Plastica="+arrayResultados[3]+" puntos<br>"+
-        "Musical="+arrayResultados[4]+" puntos<br>"+
-        "Científica="+arrayResultados[5]+" puntos<br>"+
-        "Social="+arrayResultados[6]+" puntos<br>"+
-        "Destreza manual="+arrayResultados[7]+" puntos<br>"+
-        "Practica="+arrayResultados[8]+" puntos<br>"+
-        "Ejecutiva="+arrayResultados[9]+" puntos<br>"+
-        "Trabajo de oficina="+arrayResultados[10]+" puntos");
+  GenerarRespuesta(arrayTablaRespuestas,arrayResultados);
 
 }
-const GenerarRespuesta = (resultado) =>{
+const BubblerSort = (array) => {
+	for (let i = 0; i < array.length; i++) {
+		for (let j = 0; j < array.length; j++) {
+			if (array[j] > array[j + 1]) {
+				let temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
 
+        temp = arrayTablaRespuestas[j];
+				arrayTablaRespuestas[j] = arrayTablaRespuestas[j + 1];
+				arrayTablaRespuestas[j + 1] = temp;
+			}
+		}
+	}
+  return array;
+}
+const GenerarRespuesta = (tipo,resultado) =>{
+
+  //acomodar los resultados de mayor a menor
+  // resultado = BubblerSort(resultado);
   let ContenerdorDePreguntas = document.getElementById("preguntas");
   var resultadoHTML = document.createElement("main");
   var divResultado = document.createElement("div");
-  var parrafoResultado = document.createElement("p");
+  var tablaResultado = document.createElement("table");
+  var tablaBody = document.createElement("tbody");
+  var hilo = document.createElement("thead");
+  let fila = document.createElement("tr");
+  let titulo1 = document.createElement("th");
+  let titulo2 = document.createElement("th");
 
+  titulo1.innerHTML = "Actividad";
+  titulo2.innerHTML = "Puntos";
+  fila.appendChild(titulo1);
+  fila.appendChild(titulo2);
+  hilo.appendChild(fila);
+  tablaResultado.appendChild(hilo);
   resultadoHTML.className = "container";
-  divResultado.className = "jumbotron bg-white shadow p-3 mb-5 ";
-  parrafoResultado.className = "text-dark d-flex text-left ";
+  divResultado.className = " jumbotron bg-white shadow p-3 mb-5 ";
+  tablaResultado.className = " table-striped table";
 
-  parrafoResultado.innerHTML = resultado;
 
+  for (var i = arrayTablaRespuestas.length - 1; i > -1 ; i--) {
+
+    let fila = document.createElement("tr");
+    var columna1 = document.createElement("td");
+    var columna2 = document.createElement("td");
+
+    columna1.innerHTML = tipo[i];
+    columna2.innerHTML = resultado[i];
+
+    fila.appendChild(columna1);
+    fila.appendChild(columna2);
+    tablaBody.appendChild(fila);
+  }
+
+  tablaResultado.appendChild(tablaBody)
   resultadoHTML.appendChild(divResultado);
-  divResultado.appendChild(parrafoResultado);
+  divResultado.appendChild(tablaResultado);
   ContenerdorDePreguntas.appendChild(resultadoHTML);
 }
