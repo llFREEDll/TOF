@@ -8,7 +8,7 @@ const CreateDropDownQuestion = (TextoPregunta, respuestaText1, respuestaText2 , 
   parrafoPregunta.innerHTML = TextoPregunta;
 
   pregunta.className = "container";
-  divPregunta.className = "jumbotron colorTwo align-middle shadow p-3 mb-5";
+  divPregunta.className = "jumbotron colorFour align-middle shadow p-3 mb-5";
   parrafoPregunta.className = "text-white d-flex justify-content-center ";
 
   pregunta.appendChild(divPregunta);
@@ -83,7 +83,7 @@ createTituloTest=(tituloText, cuerpoText)=>
   parrafoPregunta.innerHTML = tituloText +cuerpoText;
 
   pregunta.className = "container";
-  divPregunta.className = "jumbotron colorTwo align-middle shadow p-3 mb-5";
+  divPregunta.className = "jumbotron colorFour align-middle shadow p-3 mb-5";
   parrafoPregunta.className = "text-white d-flex justify-content-center ";
 
   pregunta.appendChild(divPregunta);
