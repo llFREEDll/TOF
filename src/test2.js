@@ -91,7 +91,7 @@ createTituloTest=(tituloText, cuerpoText)=>
   ContenerdorDePreguntas.appendChild(pregunta);
 }
 
-createTituloTest("Test 1", "<br>En seguida se presentará una lista de actividades en las cuales quizás hayas tenido alguna experiencia personal. La finalidad es que determines que tan apto te consideras para cada una de ellas. Para indicarlo selecciona uno de los siguientes números 1, 2, 3 o 4 guiándote por las explicaciones que siguen:<br><br> a)	1 si te consideras incompetente para esta actividad<br>b)	2 si te consideras medianamente apto<br>c)	3 si te consideras bastante apto<br>d)	4 si te consideras muy apto");
+createTituloTest("Test de aptitud", "<br>En seguida se presentará una lista de actividades en las cuales quizás hayas tenido alguna experiencia personal. La finalidad es que determines que tan apto te consideras para cada una de ellas. Para indicarlo selecciona uno de los siguientes números 1, 2, 3 o 4 guiándote por las explicaciones que siguen:<br><br> a)	1 si te consideras incompetente para esta actividad<br>b)	2 si te consideras medianamente apto<br>c)	3 si te consideras bastante apto<br>d)	4 si te consideras muy apto");
 
 let seccionArray=["Seccion A","Seccion B","Seccion C","Seccion D","Seccion E","Seccion F","Seccion G","Seccion H","Seccion I","Seccion J","Seccion K"]
 let preguntasArray=["Para expresarte con facilidad en clase o al conversar con tus amigos","Para redactar composiciones o artículos periodísticos","Para componer versos serios o jocosos","Para escribir cuentos, narraciones o historietas","Para saber distinguir y apreciar la buena literatura",//seccion A
@@ -173,8 +173,13 @@ const BubblerSort = (array) => {
 }
 const GenerarRespuesta = (tipo,resultado) =>{
 
+
   //acomodar los resultados de mayor a menor
-  // resultado = BubblerSort(resultado);
+  resultado = BubblerSort(resultado);
+  //para que no se repita la tabla
+  if (document.getElementById("tablaResultado") != null)
+    document.getElementById("tablaResultado").remove();
+
   let ContenerdorDePreguntas = document.getElementById("preguntas");
   var resultadoHTML = document.createElement("main");
   var divResultado = document.createElement("div");
@@ -191,6 +196,7 @@ const GenerarRespuesta = (tipo,resultado) =>{
   fila.appendChild(titulo2);
   hilo.appendChild(fila);
   tablaResultado.appendChild(hilo);
+  resultadoHTML.id = "tablaResultado";
   resultadoHTML.className = "container";
   divResultado.className = " jumbotron bg-white shadow p-3 mb-5 ";
   tablaResultado.className = " table-striped table";
