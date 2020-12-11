@@ -171,6 +171,78 @@ const BubblerSort = (array) => {
 	}
   return array;
 }
+const SetArrayCarreras = (caso) => {
+  let totalCarreras = "";
+  switch (caso) {
+    case "Verbal":
+      for (var i = 0; i < carrerasVerbal.length; i++) {
+        totalCarreras += carrerasVerbal[i];
+      }
+      return totalCarreras;
+      break
+    case "Numerica":
+      for (var i = 0; i < carrerasNumerica.length; i++) {
+        totalCarreras += carrerasNumerica[i];
+      }
+      return totalCarreras;
+      break;
+    case "Mecanica y Constructiva":
+      for (var i = 0; i < carrerasMYC.length; i++) {
+        totalCarreras += carrerasMYC[i];
+      }
+      return totalCarreras;
+      break;
+    case "Artistico-Plastica":
+      for (var i = 0; i < carrerasAP.length; i++) {
+        totalCarreras += carrerasAP[i];
+      }
+      return totalCarreras;
+      break;
+    case "Musical":
+      for (var i = 0; i < carrerasMusical.length; i++) {
+        totalCarreras += carrerasMusical[i];
+      }
+      return totalCarreras;
+      break;
+    case "Científica":
+      for (var i = 0; i < carrerasCientifica.length; i++) {
+        totalCarreras += carrerasCientifica[i];
+      }
+      return totalCarreras;
+      break;
+    case "Social":
+      for (var i = 0; i < carrerasSocial.length; i++) {
+        totalCarreras += carrerasSocial[i];
+      }
+      return totalCarreras;
+      break;
+    case "Destreza manual":
+      for (var i = 0; i < carrerasDestrezaManual.length; i++) {
+        totalCarreras += carrerasDestrezaManual[i];
+      }
+      return totalCarreras;
+      break;
+    case "Practica":
+      for (var i = 0; i < carrerasPractica.length; i++) {
+        totalCarreras += carrerasPractica[i];
+      }
+      return totalCarreras;
+      break;
+    case "Ejecutiva":
+      for (var i = 0; i < carrerasEjecutiva.length; i++) {
+        totalCarreras += carrerasEjecutiva[i];
+      }
+      return totalCarreras;
+      break;
+    case "Trabajo de oficina":
+      for (var i = 0; i < carrerasTrabajoDeOficina.length; i++) {
+        totalCarreras += carrerasTrabajoDeOficina[i];
+      }
+      return totalCarreras;
+      break;
+
+  }
+}
 const GenerarRespuesta = (tipo,resultado) =>{
 
 
@@ -189,7 +261,9 @@ const GenerarRespuesta = (tipo,resultado) =>{
   let fila = document.createElement("tr");
   let titulo1 = document.createElement("th");
   let titulo2 = document.createElement("th");
+  let pResultado = document.createElement("p");
 
+  pResultado  .innerHTML = "Tu vocacion podria ser en las Ciencias Fisicas Te recomendamos:" + SetArrayCarreras(tipo[10]) + linkUniversidades;
   titulo1.innerHTML = "Actividad";
   titulo2.innerHTML = "Puntos";
   fila.appendChild(titulo1);
@@ -219,5 +293,6 @@ const GenerarRespuesta = (tipo,resultado) =>{
   tablaResultado.appendChild(tablaBody)
   resultadoHTML.appendChild(divResultado);
   divResultado.appendChild(tablaResultado);
+  divResultado.appendChild(pResultado);
   ContenerdorDePreguntas.appendChild(resultadoHTML);
 }

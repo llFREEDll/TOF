@@ -110,24 +110,6 @@ for(var i=0; i<202; i+=2)
    c++;
 }
 
-const WriteResult = (text) =>{
-  if (document.getElementById("tablaResultado") != null)
-    document.getElementById("tablaResultado").remove();
-
-  let ContenerdorDePreguntas = document.getElementById("preguntas");
-  var resultadoHTML = document.createElement("main");
-  var divResultado = document.createElement("div");
-  var pResultado = document.createElement("p");
-
-  pResultado.innerHTML = text;
-  resultadoHTML.id = "tablaResultado";
-  resultadoHTML.className = "container";
-  divResultado.className = " jumbotron bg-white shadow p-3 mb-5 ";
-
-  resultadoHTML.appendChild(divResultado);
-  divResultado.appendChild(pResultado);
-  ContenerdorDePreguntas.appendChild(resultadoHTML);
-}
 const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
 
   /*
@@ -411,7 +393,6 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
         totalCarreras += carrerasM[i];
       }
       WriteResult("Tu vocacion podria ser en la Musica" + totalCarreras + linkUniversidades);
-      alert("Tu vocacion podria ser en la Musica");
       break;
   }
 }
@@ -419,4 +400,3 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
 function compareNumbers(a, b) {
   return a - b;
 }
-  

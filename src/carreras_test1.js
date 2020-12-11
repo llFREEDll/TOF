@@ -122,5 +122,3 @@ carrerasA = ["<br><br>Universidad: UDV<br>Licenciatura en diseño y comunicació
 "<br><br>Universidad: UNID<br>Licenciatura en educación física, recreación y deporte",
 "<br><br>Universidad: UNIVA<br>Mercadotecnia y Diseño de Marca"],
 carrerasM = ["<br><br>Universidad: UNICLA<br>Artes Escénicas y Producción de Espectáculos"];
-
-let linkUniversidades = "<br><br> Para mayor información visita nuestro apartado de <a href='universidades.html'>universidades</a> donde podrás ver los detalles de estas carreras";
