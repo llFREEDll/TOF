@@ -335,7 +335,8 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
   switch (resul[9])
   {
     case cf:
-      alert("Tu vocacion podria ser en las Ciencias Fisicas");
+      alert("Tu vocacion podria ser en las Ciencias Fisicas Te recomiendo :" carrerasCF[0]);
+
       break;
     case cb:
       alert("Tu vocacion podria ser en las Ciencias Biologicas");
