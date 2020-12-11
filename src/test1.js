@@ -110,7 +110,24 @@ for(var i=0; i<202; i+=2)
    c++;
 }
 
+const WriteResult = (text) =>{
+  if (document.getElementById("tablaResultado") != null)
+    document.getElementById("tablaResultado").remove();
 
+  let ContenerdorDePreguntas = document.getElementById("preguntas");
+  var resultadoHTML = document.createElement("main");
+  var divResultado = document.createElement("div");
+  var pResultado = document.createElement("p");
+
+  pResultado.innerHTML = text;
+  resultadoHTML.id = "tablaResultado";
+  resultadoHTML.className = "container";
+  divResultado.className = " jumbotron bg-white shadow p-3 mb-5 ";
+
+  resultadoHTML.appendChild(divResultado);
+  divResultado.appendChild(pResultado);
+  ContenerdorDePreguntas.appendChild(resultadoHTML);
+}
 const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
 
   /*
@@ -332,37 +349,68 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
 
   var resul=[cf, cb, cp, c, e, p, l, h, a, m];
   resul.sort(compareNumbers);
+  var totalCarreras = "";
   switch (resul[9])
   {
     case cf:
-      alert("Tu vocacion podria ser en las Ciencias Fisicas Te recomiendo :" carrerasCF[0]);
-
+      for (var i = 0; i < carrerasCF.length; i++) {
+        totalCarreras += carrerasCF[i];
+      }
+      WriteResult("Tu vocacion podria ser en las Ciencias Fisicas Te recomendamos:" + totalCarreras + linkUniversidades);
       break;
     case cb:
-      alert("Tu vocacion podria ser en las Ciencias Biologicas");
+      for (var i = 0; i < carrerasCB.length; i++) {
+        totalCarreras += carrerasCB[i];
+      }
+      WriteResult("Tu vocacion podria ser en las Ciencias Biologicas" + totalCarreras + linkUniversidades);
       break;
     case cp:
-      alert("Tu vocacion podria ser en la Computacion");
+      for (var i = 0; i < carrerasCP.length; i++) {
+        totalCarreras += carrerasCP[i];
+      }
+      WriteResult("Tu vocacion podria ser en la Computación" + totalCarreras + linkUniversidades);
       break;
     case c:
-      alert("Tu vocacion podria ser en lo Comercial");
+      for (var i = 0; i < carrerasC.length; i++) {
+        totalCarreras += carrerasC[i];
+      }
+      WriteResult("Tu vocacion podria ser en lo Comercial" + totalCarreras + linkUniversidades);
       break;
     case e:
-      alert("Tu vocacion podria ser en lo Ejecutivo");
+      for (var i = 0; i < carrerasE.length; i++) {
+        totalCarreras += carrerasE[i];
+      }
+      WriteResult("Tu vocacion podria ser en lo Ejecutivo" + totalCarreras + linkUniversidades);
       break;
     case p:
-      alert("Tu vocacion podria ser en lo Persuasivo");
+      for (var i = 0; i < carrerasP.length; i++) {
+        totalCarreras += carrerasP[i];
+      }
+      WriteResult("Tu vocacion podria ser en lo Persuasivo" + totalCarreras + linkUniversidades);
       break;
     case l:
-      alert("Tu vocacion podria ser en las Lenguas");
+      for (var i = 0; i < carrerasL.length; i++) {
+        totalCarreras += carrerasL[i];
+      }
+      WriteResult("Tu vocacion podria ser en las Lenguas" + totalCarreras + linkUniversidades);
       break;
     case h:
-      alert("Tu vocacion podria ser en las Humanitarias");
+      for (var i = 0; i < carrerasH.length; i++) {
+        totalCarreras += carrerasH[i];
+      }
+      WriteResult("Tu vocacion podria ser en las Humanitarias" + totalCarreras + linkUniversidades);
       break;
     case a:
-      alert("Tu vocacion podria ser en lo Artistico");
+      for (var i = 0; i < carrerasA.length; i++) {
+        totalCarreras += carrerasA[i];
+      }
+      WriteResult("Tu vocacion podria ser en lo Artistico" + totalCarreras + linkUniversidades);
       break;
     case m:
+      for (var i = 0; i < carrerasM.length; i++) {
+        totalCarreras += carrerasM[i];
+      }
+      WriteResult("Tu vocacion podria ser en la Musica" + totalCarreras + linkUniversidades);
       alert("Tu vocacion podria ser en la Musica");
       break;
   }
@@ -371,3 +419,4 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
 function compareNumbers(a, b) {
   return a - b;
 }
+  
