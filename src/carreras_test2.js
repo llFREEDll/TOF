@@ -1,3 +1,4 @@
+//Este apartado carga en memoria las carreras clasificadas por aptitudes
 var carrerasVerbal = ["<br><br>Universidad: UDV<br>Licenciatura en administración",
 "<br><br>Universidad: UDV<br>Licenciatura en derecho",
 "<br><br>Universidad: UVA<br>Licenciatura en derecho",

@@ -1,3 +1,4 @@
+//Este apartado carga en memoria las carreras clasificadas por vocaciones
 var carrerasCF = ["<br><br>Universidad: UDV<br>Licenciatura en arquitectura",
 "<br><br>Universidad: UDV<br>Ingeniería Civil",
 "<br><br>Universidad: UMNSH<br>Ingeniería en agronomía",

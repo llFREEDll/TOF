@@ -1,3 +1,4 @@
+// funcion que sirve para generar un recuadro con las preguntas a realizar en el test vocacional
 const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , idRespuesta1, idRespuesta2, RadioName) => {
 
   let ContenerdorDePreguntas = document.getElementById("preguntas");
@@ -20,7 +21,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , idRespue
     pregunta.className = "container";
     divPregunta.className = "jumbotron colorFour align-middle shadow p-3 mb-5";
     parrafoPregunta.className = "text-white d-flex justify-content-center ";
-    divrespuesta.className = "input-group w-50 marginLeft25";
+    divrespuesta.className = "input-group w-100";
     div2respuesta.className = "input-group-prepend";
     div3respuesta.className = "input-group-text bg-white";
     inputRespuesta.type = "radio";
@@ -52,7 +53,7 @@ const CreateQuestion = (TextoPregunta, respuestaText1, respuestaText2 , idRespue
   ContenerdorDePreguntas.appendChild(pregunta);
 
 }
-
+//funcion que genera un recuadro con las instrucciones a seguir para realizar el test
 createTituloTest=(tituloText, cuerpoText)=>
 {
   /*
@@ -77,9 +78,10 @@ createTituloTest=(tituloText, cuerpoText)=>
   divPregunta.appendChild(parrafoPregunta);
   ContenerdorDePreguntas.appendChild(pregunta);
 }
-
+//se instancia la funcion crear titulo
 createTituloTest("Test Vocacional", "<br>Este inventario es útil para la comprensión de los intereses vocacionales de una persona, cuenta con 100 reactivos que puntea como resultado 20 juicios para cada área vocacional que mide. (Duración 15 minutos) <br>En este cuestionario se le pide que exprese su preferencia por diferentes ocupaciones. Las ocupaciones se presentan por pares y se le pide que las marque para indicar sus preferencias. En cada comparación, no tome en cuenta la diferencia de salario y/o prestigio.");
 
+// arreglo que muestra todas las preguntas del test vocacional
 let arrayPreguntas=["Ciencias Físicas" , "Ingeniero Civil", "Mecánico" , "Veterinario","Inventor" , "Agente de compras", "Químico" , "Comerciante de Automóviles",
 "Electricidad" , "Director de museo", "Aviador" , "Abogado Defensor", "Ciencias Físicas" , "Escritor", "Astrónomo" , "Sacerdote", "Diseño de máquinas" , "Arquitecto",
 "Radio Técnico" , "Maestro de Música", "Medico" , "Ciencias Físicas", "Nutrición" , "Zoólogo", "Dentista" , "Estadística", "Veterinario" , "Industrial",
@@ -104,12 +106,14 @@ let arrayPreguntas=["Ciencias Físicas" , "Ingeniero Civil", "Mecánico" , "Vete
 "Cirujano", "Saxofonista", "Cajero", "Violinista", "Comerciante de Inmuebles", "Cantante", "Director de Hospital", "Director de Coros", "Vendedor", "Compositor de Canciones",
 "Corresponsal en el extranjero", "Organista", "Bienestar Infantil", "Maestro de Música", "Diseñador de Vestidos", "Pianista", "Violinista"]
 var c=1;
+// se crean todas las preguntas de manera dinamica
 for(var i=0; i<202; i+=2)
 {
   CreateQuestion("Seccion "+c, arrayPreguntas[i], arrayPreguntas[i+1], i, (i+1), "Seccion "+c);
    c++;
 }
 
+// cuando se oprime el voton evaluar
 const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
 
   /*
@@ -396,7 +400,7 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
       break;
   }
 }
-
+// funcion que sirve como auxiliar para ordenar los resultados
 function compareNumbers(a, b) {
   return a - b;
 }

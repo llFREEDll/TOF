@@ -1,3 +1,4 @@
+//funcion que genera dinamicamente un recuadro con las preguntas y las opciones de respuesta
 const CreateDropDownQuestion = (TextoPregunta, respuestaText1, respuestaText2 , respuestaText3, respuestaText4, respuestaText5, idRespuesta1, idRespuesta2,idRespuesta3,idRespuesta4,idRespuesta5) => {
 
   let ContenerdorDePreguntas = document.getElementById("preguntas");
@@ -27,6 +28,7 @@ for (var i = 0; i < 5; i++) {
   selectorRespuesta.className = "btn btn-secondary dropdown-toggle bg-white text-dark";
   respuesta.type = "text";
   respuesta.className = "form-control bg-white text-dark";
+  respuesta.id = "ta";
   respuesta.disabled = true;
 
   switch (i) {
@@ -72,7 +74,7 @@ for (var i = 0; i < 5; i++) {
 }
 
 }
-
+// funcion que genera un titulo e instrucciones en el test
 createTituloTest=(tituloText, cuerpoText)=>
 {
   let ContenerdorDePreguntas = document.getElementById("preguntas");
@@ -90,9 +92,9 @@ createTituloTest=(tituloText, cuerpoText)=>
   divPregunta.appendChild(parrafoPregunta);
   ContenerdorDePreguntas.appendChild(pregunta);
 }
-
+//se instancia la funcion de generar un titulo e instrucciones
 createTituloTest("Test de aptitud", "<br>En seguida se presentará una lista de actividades en las cuales quizás hayas tenido alguna experiencia personal. La finalidad es que determines que tan apto te consideras para cada una de ellas. Para indicarlo selecciona uno de los siguientes números 1, 2, 3 o 4 guiándote por las explicaciones que siguen:<br><br> a)	1 si te consideras incompetente para esta actividad<br>b)	2 si te consideras medianamente apto<br>c)	3 si te consideras bastante apto<br>d)	4 si te consideras muy apto");
-
+//arreglos para almacenar las preguntas y sus opciones de respuestas
 let seccionArray=["Seccion A","Seccion B","Seccion C","Seccion D","Seccion E","Seccion F","Seccion G","Seccion H","Seccion I","Seccion J","Seccion K"]
 let preguntasArray=["Para expresarte con facilidad en clase o al conversar con tus amigos","Para redactar composiciones o artículos periodísticos","Para componer versos serios o jocosos","Para escribir cuentos, narraciones o historietas","Para saber distinguir y apreciar la buena literatura",//seccion A
 "Para ejecutar con exactitud y rapidez operaciones aritméticas","Para hacer cálculos mentales","Para calcular costos en una fiesta","Para comprender fórmulas matemáticas","Para distribuir el dinero de la escuela en varias actividades",//seccion B
@@ -105,12 +107,14 @@ let preguntasArray=["Para expresarte con facilidad en clase o al conversar con t
 "Para participar en actividades que requieren valor, audacia, decisión, como trepar, dar saltos arriesgados, tomar juegos peligrosos, etc.","Para dominarte en situaciones peligrosas o comprometidas, sin perder la serenidad ni el control de la situación","Para dominar tus nervios y continuar con lo que estés haciendo en un momento en que, por algún peligro, todos quieren huir", "Para recuperar pronto la tranquilidad y presencia de ánimo después de un susto","Para no contagiarte del miedo o pánico de los demás, e infundirles animo con tu ejemplo",//Seccion I
 "Para ser jefe competente de un grupo, equipo o sociedad de muchachos","Para organizar y dirigir festivales, encuentros deportivos, excursiones o campañas sociales","Para convencer a otros a que hagan lo que creen que deben hacer","Para dar órdenes a otros, con seguridad y naturalidad","Para dirigir un grupo o equipo en situaciones difíciles o peligrosas",//seccion J
 "Para llevar en forma correcta y ordenada los apuntes de las clases","Para ordenar y clasificar debidamente documentos y correspondencia de una oficina","Para aprender a contestar y redactar correctamente cartas y oficios","Para anotar y manejar con exactitud y rapidez nombres, números y otros datos de oficina","Para encargarte de recibir anotar y dar recados, sin olvidar los detalles importantes"]//seccion K
+//se generan todas las preguntas de manera dinamica
 var aux=0;
 for (var i = 0; i < 11; i++) {
 
   CreateDropDownQuestion(seccionArray[i] , preguntasArray[aux] , preguntasArray[aux+1], preguntasArray[aux+2], preguntasArray[aux+3], preguntasArray[aux+4], aux, aux+1, aux+2, aux+3, aux+4);
   aux+=5;
 }
+// arreglo para almacenar y manipular los tipos de aptitudes que hay
 let arrayTablaRespuestas = ["Verbal",
   "Numerica",
 "Mecanica y Constructiva",
@@ -123,6 +127,7 @@ let arrayTablaRespuestas = ["Verbal",
 "Ejecutiva",
 "Trabajo de oficina"
 ];
+//cuando se oprime el boton evaluar
 const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas del test
 
   /*
@@ -155,6 +160,7 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
   GenerarRespuesta(arrayTablaRespuestas,arrayResultados);
 
 }
+// funcion que ordena dos arreglos por burbuja
 const BubblerSort = (array) => {
 	for (let i = 0; i < array.length; i++) {
 		for (let j = 0; j < array.length; j++) {
@@ -171,6 +177,7 @@ const BubblerSort = (array) => {
 	}
   return array;
 }
+funcion que genera como respuesta las carreras aptas para tu tipo de aptitud
 const SetArrayCarreras = (caso) => {
   let totalCarreras = "";
   switch (caso) {
@@ -243,6 +250,7 @@ const SetArrayCarreras = (caso) => {
 
   }
 }
+// funcion que genera un recuadro con las respuestas dadas por el algoritmo de evalaucion
 const GenerarRespuesta = (tipo,resultado) =>{
 
 

@@ -1,3 +1,4 @@
+/* estilos externos a bootstrap para dar diseño a el sitio web */
 body {
 min-height: 75rem;
 padding-top: 4.5rem;
@@ -15,6 +16,9 @@ user-select: none;
 @media (min-width: 768px) {
 .bd-placeholder-img-lg {
 font-size: 3.5rem;
+}
+#ta{
+  font-size: 4px !important;
 }
 }
 
@@ -64,4 +68,15 @@ font-size: 3.5rem;
 }
 .marginLeft40{
   margin-left: 40% !important;
+}
+.padding10{
+  padding: 20px;
+}
+.height1{
+  height: 90px !important;
+
+}
+.mt{
+
+  margin-top: 5px !important;
 }

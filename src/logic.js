@@ -1,13 +1,16 @@
-
+// se acciona cuando se oprime el boton informacion/About
 const About = () =>{
 alert("Este proyecto fue realizado por:\n\nDuran Linares Ana Valeria\nGarcia Montiel Juan Diego\nSierra Mendoza Alfredo\nUribe Baltazar Bramdon Aldair\n\nCon el objetivo de orientar a los jóvenes que no tienen claro que desean estudiar.\nTOF pretende dar una visión más amplia a sus usuarios, no solo resaltando sus cualidades con un test vocacional, sino a su vez mostrando las mejores opciones de la región en las cuales pueden aprender a desarrollar sus habilidades.");
 }
+// se acciona cuando se oprime el boton work
 const Works = () =>{
     alert('Actualmente este proyecto presenta las siguientes herramientas:\n\n-Test vocacional\n-Retículas de las universidades más importantes de Uruapan');
 }
+// se acciona cuando se oprime el boton contact/ contactos
 const Contact = () =>{
     alert('Instagram: https://www.instagram.com/alfredo._sm/ \n github: https://github.com/llFREEDll');
 }
+//funcion que genera los resultados para el test vocacional
 const WriteResult = (text) =>{
   if (document.getElementById("tablaResultado") != null)
     document.getElementById("tablaResultado").remove();
@@ -26,5 +29,5 @@ const WriteResult = (text) =>{
   divResultado.appendChild(pResultado);
   ContenerdorDePreguntas.appendChild(resultadoHTML);
 }
-
+//variable que redirige a la pestana de universidades
 let linkUniversidades = "<br><br> Para mayor información visita nuestro apartado de <a href='universidades.html'>universidades</a> donde podrás ver los detalles de estas carreras";
