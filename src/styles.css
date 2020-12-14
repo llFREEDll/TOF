@@ -17,11 +17,14 @@ user-select: none;
 .bd-placeholder-img-lg {
 font-size: 3.5rem;
 }
-#ta{
-  font-size: 4px !important;
 }
-}
+@media (max-width: 768px) {
+  #ta{
+    font-size: 12px !important;
+    height: 80px;
 
+}
+}
 .colorOne{
   background-color: #005582 !important;
 }
@@ -75,8 +78,4 @@ font-size: 3.5rem;
 .height1{
   height: 90px !important;
 
-}
-.mt{
-
-  margin-top: 5px !important;
 }

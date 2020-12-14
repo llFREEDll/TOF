@@ -25,9 +25,9 @@ for (var i = 0; i < 5; i++) {
 
   divrespuesta.className = "input-group w-100 ";
   div2respuesta.className = "input-group-prepend";
-  selectorRespuesta.className = "btn btn-secondary dropdown-toggle bg-white text-dark";
+  selectorRespuesta.className = "btn btn-secondary text-md-center dropdown-toggle bg-white text-dark";
   respuesta.type = "text";
-  respuesta.className = "form-control bg-white text-dark";
+  respuesta.className = "form-control bg-white text-dark ";
   respuesta.id = "ta";
   respuesta.disabled = true;
 
