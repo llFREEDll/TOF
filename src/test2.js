@@ -177,7 +177,7 @@ const BubblerSort = (array) => {
 	}
   return array;
 }
-funcion que genera como respuesta las carreras aptas para tu tipo de aptitud
+// funcion que genera como respuesta las carreras aptas para tu tipo de aptitud
 const SetArrayCarreras = (caso) => {
   let totalCarreras = "";
   switch (caso) {
