@@ -20,9 +20,9 @@ font-size: 3.5rem;
 }
 @media (max-width: 768px) {
   #ta{
-    font-size: 12px !important;
-    height: 80px;
 
+  height: auto;
+  font-size: 0.9rem;
 }
 }
 .colorOne{

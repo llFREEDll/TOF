@@ -21,36 +21,36 @@ for (var i = 0; i < 5; i++) {
   var divrespuesta = document.createElement("div");
   var div2respuesta = document.createElement("div");
   var selectorRespuesta = document.createElement("select");
-  var respuesta = document.createElement("textarea");
+  var respuesta = document.createElement("p");
 
   divrespuesta.className = "input-group w-100 ";
   div2respuesta.className = "input-group-prepend";
   selectorRespuesta.className = "btn btn-secondary text-md-center dropdown-toggle bg-white text-dark";
   respuesta.type = "text";
-  respuesta.className = "form-control bg-white text-dark ";
+  respuesta.className = "form-control bg-white text-dark";
   respuesta.id = "ta";
   respuesta.disabled = true;
 
   switch (i) {
     case 0:
       selectorRespuesta.id = idRespuesta1;
-      respuesta.value = respuestaText1;
+      respuesta.innerHTML = respuestaText1;
       break;
     case 1:
       selectorRespuesta.id = idRespuesta2;
-      respuesta.value = respuestaText2;
+      respuesta.innerHTML = respuestaText2;
       break;
     case 2:
       selectorRespuesta.id = idRespuesta3;
-      respuesta.value = respuestaText3;
+      respuesta.innerHTML = respuestaText3;
       break;
     case 3:
       selectorRespuesta.id = idRespuesta4;
-      respuesta.value = respuestaText4;
+      respuesta.innerHTML = respuestaText4;
       break;
     case 4:
       selectorRespuesta.id = idRespuesta5;
-      respuesta.value = respuestaText5;
+      respuesta.innerHTML = respuestaText5;
       break;
   }
 
