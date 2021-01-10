@@ -22,6 +22,7 @@
 
          </div>
        </main>
+       <?php include("src/footer.php")?>
 
        <!-- scripts necesarios para generar las animaciones y la logica de programacion -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

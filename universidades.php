@@ -432,6 +432,7 @@ Habilidades y Capacidades de: análisis, Interpretación y solución de problema
           <p class="text-white">Selecciona una de la universidades para conocer a detalle sus carreras así como sus asignaturas o materias de las cuales disponen cada carrera, te recomendamos que si alguna carrera llama tu atención ingreses al link de la página de la universidad ya que en esta podras ver una mayor cantidad de información sobre la carrera de tu interés.</p>
       </div>
     </main>
+    <?php include("src/footer.php")?>
     <!-- scripts necesarios para generar las animaciones y la logica de programacion -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
