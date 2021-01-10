@@ -336,6 +336,7 @@ const Evaluar = () =>{ // cuando se oprime el boton de evaluar las respuestas de
   var resul=[cf, cb, cp, c, e, p, l, h, a, m];
   resul.sort(compareNumbers);
   var totalCarreras = "";
+  let linkUniversidades = "<br><br> Para mayor información visita nuestro apartado de <a href='universidades.php'>universidades</a> donde podrás ver los detalles de estas carreras";
   switch (resul[9])
   {
     case cf:
